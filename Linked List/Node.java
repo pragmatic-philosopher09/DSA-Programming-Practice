@@ -1,4 +1,4 @@
-class Node
+class Node 
 {
     int data;
     Node next;
@@ -77,7 +77,7 @@ class Node
         return newHead;
 
     }
-    public static void main(String args[])
+    public static void main(String [] args)
     {
         Node n1 = new Node(10);
         Node n2 = new Node(20);
