@@ -15,18 +15,18 @@ public class QueueUsingCircularArray {
 
     void enqueue(int d) 
     {
-       if(front==-1 && rear == -1)
+       if(front==-1)
        {
        front++;
-       rear++;
+     
        }
-
+       rear=(rear+1)%cap;
        if((rear+1)%cap==front)
        {
            System.out.println("Queue Full! Cannot Enter!");
            return;
        }
-       rear=(rear+1)%cap;
+       
        q[rear]=d;
     }
 
