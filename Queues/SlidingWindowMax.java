@@ -33,7 +33,7 @@ class SlidingWindowMax
             
             //Calling the method max_of_subarrays of class solve
             //and storing the result in an ArrayList
-            ArrayList <Integer> res = new Solution().max_of_subarrays(arr, n, k);
+            ArrayList <Integer> res = new Solu().max_of_subarrays(arr, n, k);
             
             //printing the elements of the ArrayList
             for (int i = 0; i < res.size(); i++)
@@ -46,7 +46,7 @@ class SlidingWindowMax
 
 //User function template for JAVA
 
-class Solution
+class Solu
 {
     //Function to find maximum of each subarray of size k.
     static ArrayList <Integer> max_of_subarrays(int arr[], int n, int k)
