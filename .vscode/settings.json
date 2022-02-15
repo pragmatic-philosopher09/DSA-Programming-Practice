@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "Stacks",
         "Queues",
+        "Miscellaneous",
         "Linked List",
-        "Miscellaneous"
+        "Collections Framework/HashMapPractice.java"
     ]
 }
