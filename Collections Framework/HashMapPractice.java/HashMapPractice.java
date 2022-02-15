@@ -15,7 +15,7 @@ public class HashMapPractice {
         System.out.println(h);
 
         for (Map.Entry<Integer, String> e: h.entrySet()) {
-            //            System.out.println(e);
+            System.out.println(e);
 
         System.out.println(h.containsKey(2));
         System.out.println(h.containsValue("Seven"));
