@@ -4,6 +4,7 @@
         "Queues",
         "Miscellaneous",
         "Linked List",
-        "Collections Framework/HashMapPractice.java"
+        "Collections Framework/HashMapPractice.java",
+        "Bit Manipulation/RepeatedAndMissingElement.java"
     ]
 }
