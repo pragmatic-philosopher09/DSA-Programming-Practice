@@ -39,9 +39,9 @@ class Solution
             if(A[mid]==key)
             return mid;
             
-            if(A[beg]<A[mid])
+            if(A[beg]<=A[mid])
             {
-               if(key>=A[beg] && key < A[mid])
+               if(key>=A[beg] && key <= A[mid])
                {
                    end=mid-1;
                }
@@ -54,7 +54,7 @@ class Solution
             
             else
             {
-                if(key>A[mid] && key<=A[end])
+                if(key>=A[mid] && key<=A[end])
                 {
                     beg=mid+1;
                 }
