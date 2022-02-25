@@ -1,7 +1,7 @@
 // { Driver Code Starts
     import java.util.*;
     import java.io.*;
-    class Codes
+   public class FirstNonRepeating
     {
         public static void main(String[] args) throws IOException
         {
