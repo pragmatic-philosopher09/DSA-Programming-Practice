@@ -34,6 +34,7 @@ class Solution
         int count=0,curSum=0;
         int i;
         HashMap<Integer,Integer> m = new HashMap<>();
+        m.put(0,1);
         for(i=0;i<N;i++)
         {
             curSum+=Arr[i];
