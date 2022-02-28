@@ -9,9 +9,9 @@ public class ReturnTwoPrimes{
         while(t-- > 0){
             int N = Integer.parseInt(in.readLine());
             
-            Solution ob = new Solution();
+            
             List<Integer> ans = new ArrayList<Integer>();
-            ans = ob.primeDivision(N);
+            ans = Solution.primeDivision(N);
             System.out.println(ans.get(0) + " " + ans.get(1));
         }
     }
