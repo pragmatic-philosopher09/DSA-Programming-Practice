@@ -1,20 +1,21 @@
 import java.util.*;
 public class StackSort{
 	public static void main(String[] args){
-		Scanner sc=new Scanner(System.in);
-		int t=sc.nextInt();
-		while(t-->0){
-			Stack<Integer> s=new Stack<>();
-			int n=sc.nextInt();
-			while(n-->0)
-			s.push(sc.nextInt());
-			Sol g=new Sol();
-			Stack<Integer> a=g.sort(s);
-			while(!a.empty()){
-				System.out.print(a.peek()+" ");
-				a.pop();
+		try (Scanner sc = new Scanner(System.in)) {
+			int t=sc.nextInt();
+			while(t-->0){
+				Stack<Integer> s=new Stack<>();
+				int n=sc.nextInt();
+				while(n-->0)
+				s.push(sc.nextInt());
+				Sol g=new Sol();
+				Stack<Integer> a=g.sort(s);
+				while(!a.empty()){
+					System.out.print(a.peek()+" ");
+					a.pop();
+				}
+				System.out.println();
 			}
-			System.out.println();
 		}
 	}
 }// } Driver Code Ends
