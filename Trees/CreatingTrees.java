@@ -14,26 +14,27 @@ class Node
 public class CreatingTrees {
     static Node createTree()
     {
-        Scanner in = new Scanner(System.in);
-        Node root = null;
+        try (Scanner in = new Scanner(System.in)) {
+            Node root = null;
 
-        System.out.println("ENTER DATA ==> ");
-        
-        int d = in.nextInt();
-       
+            System.out.println("ENTER DATA ==> ");
+            
+            int d = in.nextInt();
+      
 
-        if (d == -1)
-        return null;
+            if (d == -1)
+            return null;
 
-        root = new Node(d);
-        
-        System.out.println("ENTER LEFT FOR : "+d);
-        root.left = createTree();
+            root = new Node(d);
+            
+            System.out.println("ENTER LEFT FOR : "+d);
+            root.left = createTree();
 
-        System.out.println("ENTER RIGHT FOR : "+d);
-        root.right = createTree();
+            System.out.println("ENTER RIGHT FOR : "+d);
+            root.right = createTree();
 
-        return root;
+            return root;
+        }
     }
 
     public static void main(String[] args) {
