@@ -14,7 +14,7 @@ class Node
 public class CreatingTrees {
     static Node createTree()
     {
-        try (Scanner in = new Scanner(System.in)) {
+       Scanner in = new Scanner(System.in);
             Node root = null;
 
             System.out.println("ENTER DATA ==> ");
@@ -35,7 +35,8 @@ public class CreatingTrees {
 
             return root;
         }
-    }
+    
+    
 
     public static void main(String[] args) {
         createTree();
