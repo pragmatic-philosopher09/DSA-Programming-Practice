@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-class TopologicalSortingUsingDFS {
+class TopologicalSortingUsingBFS {
     public static void main(String[] args) throws IOException {
         BufferedReader read =
             new BufferedReader(new InputStreamReader(System.in));
@@ -62,39 +62,54 @@ class Solution
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) 
     {
         // add your code here
-        boolean visited[] = new boolean[V];
-        Stack<Integer> st = new Stack<>();
         
-        for(int i = 0; i < V;i++)
+        int inDegree[] = new int[V];
+        
+        for(ArrayList<Integer> list: adj)
         {
-            if(!visited[i])
+            for(Integer ele: list)
             {
-                dfsTraversal(adj, visited, st, i);
+                inDegree[ele]++;
             }
         }
+       
+        ArrayList<Integer> res = new ArrayList<>();
         
-        int res[] = new int[st.size()];
+        bfsTraversal(adj, inDegree, res, V, 0);
         
-        for (int i = 0; i < V; i++)
+        int ans[] = new int[res.size()];
+        
+        for(int i=0;i<V;i++)
         {
-            res[i] = st.pop();
+            ans[i] = res.get(i);
         }
         
-        return res;
+        return ans;
     }
-    
-    static void dfsTraversal(ArrayList<ArrayList<Integer>> adj, boolean visited[], Stack<Integer> st, int v)
+        
+    static void bfsTraversal(ArrayList<ArrayList<Integer>> adj, int inDegree[], ArrayList<Integer> res, int V, int v)
     {
-        visited[v] = true;
+        Queue<Integer> q = new ArrayDeque<>();
         
-        for(Integer neighbour: adj.get(v))
+        for(int i = 0; i < V; i++)
         {
-            if(!visited[neighbour])
-            dfsTraversal(adj, visited, st, neighbour);
+            if(inDegree[i]==0)
+            q.offer(i);
         }
+    
+    
+    while(!q.isEmpty())
+    {
+        int curr = q.poll();
+        res.add(curr);
         
-        st.push(v);
+        for(int neighbour: adj.get(curr))
+        {
+            if(--inDegree[neighbour] == 0)
+            {
+                q.add(neighbour);
+            }
+        }
     }
-    
-    
+    }
 }
